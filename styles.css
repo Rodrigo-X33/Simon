@@ -10,6 +10,44 @@ body {
   color: #FEF2BF;
 }
 
+.instructions {
+  font-family: 'Press Start 2P', cursive;
+  color: #FEF2BF;
+  margin: 2% auto;
+  max-width: 600px;
+  padding: 20px;
+  background-color: rgba(254, 242, 191, 0.1);
+  border-radius: 15px;
+  border: 2px solid #FEF2BF;
+}
+
+.instructions h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #FEF2BF;
+}
+
+.instructions ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.instructions li {
+  font-size: 0.8rem;
+  margin: 10px 0;
+  padding: 8px;
+  background-color: rgba(1, 31, 63, 0.3);
+  border-radius: 8px;
+  border-left: 4px solid #FEF2BF;
+}
+
+.instructions li:before {
+  content: "▶ ";
+  color: #FEF2BF;
+  font-weight: bold;
+}
+
 .container {
   display: block;
   width: 50%;

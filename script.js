@@ -16,6 +16,8 @@ console.log(arrButtons);
 
 //titulo del juego
 const levelTitle = $('#level-title');
+//elemento de instrucciones
+const gameInstructions = $('#game-instructions');
 //botones con jQuery
 let jqButtons = [];
 const redjq = $("#red");
@@ -119,6 +121,10 @@ const reset = ()=>{
     niveles = [];
     numeroRepetido = '';
     removeEventListener('keypress', reset);
+    // Mostrar las instrucciones nuevamente
+    gameInstructions.show();
+    levelTitle.text("Presiona una tecla para empezar");
+    levelTitle.css('text-transform', 'uppercase');
     startGame();
   }
 const gameOver = ()=>{
@@ -129,6 +135,8 @@ const gameOver = ()=>{
   }, 200);
   levelTitle.text("Has perdido, presiona una tecla para volver a empezar");
   levelTitle.css('text-transform', 'capitalize');
+  // Mostrar las instrucciones cuando el juego termine
+  gameInstructions.show();
   addEventListener('keypress', reset)
 }
 
@@ -148,6 +156,8 @@ const removeEventos = () => {
 
 const startGame = () => {
   removeEventListener("keypress", startGame);
+  // Ocultar las instrucciones cuando el juego comience
+  gameInstructions.hide();
   generarNivel();
 };
 const generarNivel = () => {
@@ -204,7 +214,7 @@ y asi tener que volver a encontrar un elemento diferente, luego haré la otra fu
 2.Generar nuevo nivel cuando se hayan leido todos los números
 
 Efectivamente logre crear la primera función correctamente, lee todos los niveles, ahora cuando ya lee todos, debo resetear en 0 el valor de numeros leidos y cambiar la ubicación de la generacion del numero aleatorio
-para que le añade un elemento nuevo cuando se ejecute la función generar nivel, debo comprobar si no hay problemas al declararla dentro de la funcion, luego con eso deberia leer cada vez mas numeros segun se vayan
+para que le añade un elemento nuevo cuando se ejecute la funcion generar nivel, debo comprobar si no hay problemas al declararla dentro de la funcion, luego con eso deberia leer cada vez mas numeros segun se vayan
 presionando.
 */
 
